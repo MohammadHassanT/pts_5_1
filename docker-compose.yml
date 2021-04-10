@@ -4,7 +4,7 @@ services:
         django_web_server:
                 build: .
                 container_name: django_container
-                command: python /code/testproject/manage.py runserver 0.0.0.0:8000
+                command: python /code/test_project/manage.py runserver 0.0.0.0:8000
                 volumes:
                         - .:/code
                 ports:

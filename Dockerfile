@@ -17,8 +17,8 @@ WORKDIR /code
 COPY poetry.lock pyproject.toml /code/
 
 # Project initialization:
-RUN poetry config POETRY_VIRTUALENVS_CREATE=false \
-  && poetry install --no-interaction --no-ansi
+RUN poetry config virtualenvs.create false 
+RUN poetry install --no-interaction --no-ansi
 
 # Creating folders, and files for a project:
 COPY . /code
